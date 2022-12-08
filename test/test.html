@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+ <div class="container mt-3">
+    <table class="table table-dark">
+        <thead >
+            <th>Sno</th>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Section</th>
+            <th>Gender</th>
+        </thead>
+        <tbody id="tbody1"></tbody>
+    </table>
+   </div>
+
+
+    <script type="module">
+    var stdNo = 0;
+    var tbody = document.getElementById('tbody1');
+
+    function AddItemTable(name,roll,sec,gen){
+    let trow = document.createElement("tr");
+    let td1 = document.createElement('td');
+    let td2 = document.createElement('td');
+    let td3 = document.createElement('td');
+    let td4 = document.createElement('td');
+    let td5 = document.createElement('td');
+
+    td1.innerHTML= ++stdNo;
+    td2.innerHTML= name;
+    td3.innerHTML= roll;
+    td4.innerHTML= sec;
+    td5.innerHTML= gen;
+
+    trow.appendChild(td1);
+    trow.appendChild(td2);
+    trow.appendChild(td3);
+    trow.appendChild(td4);
+    trow.appendChild(td5);
+
+    tbody.appendChild(trow);
+    }
+
+    function AddAllItemToTable(TheStudent){
+        stdNo=0;
+        tbody.innerHTML="";
+        TheStudent.forEach(element => {
+            AddAllItemToTable(element.NameOfStd, element.RollNo, element.Section, element.Gender)
+        })
+    }
+
+         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyANbgo8c0rbSdjZu8UORbeL06iIIT6rx7w",
+                authDomain: "fir-b86f6.firebaseapp.com",
+                databaseURL: "https://fir-b86f6-default-rtdb.firebaseio.com",
+                projectId: "fir-b86f6",
+                storageBucket: "fir-b86f6.appspot.com",
+                messagingSenderId: "786526910108",
+                appId: "1:786526910108:web:c377e78349b93b7190df59"
+            };
+
+             // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+
+              import { getDatabase, ref, child, onValue,  get }
+                    from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js"
+
+         const db = getDatabase();
+
+
+   function GetAllDataOnce(){
+    const dbRef = ref(db);
+    
+    get(child(dbRef, "student"))
+    .then((snapshot)=>{
+        var students =[];
+
+        snapshot.forEach(childSnapshot => {
+            students.push(childSnapshot.val());
+        });
+
+        AddAllItemToTable(students);
+    })
+   }
+
+   function GetAllDataRealtime() {
+        const dbRef = ref(db, "student");
+
+        onValue(dbRef,(snapshot) => {
+            var students =[];
+
+            snapshot.forEach(childSnapshot => {
+                students.push(childSnapshot.val());
+            })
+
+            AddAllItemToTable(students);
+        })
+    }
+
+   window.onload = GetAllDataRealtime;
+
+
+
+
+    </script>
+</body>
+</html>
