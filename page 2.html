@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>label{display: inline-block; width: 80px;}
+    input,select{width: 120px;}</style>
+</head>
+<body>
+   
+    <label>Name</label><input id="Rollbox" type="text"><br><br>
+    <label>Section</label><input id="Namebox" type="text"><br><br>
+    <label>Id</label><input id="Secbox" type="text"><br><br>
+    <label>Gender</label>
+    <select id="Genbox">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+
+    <hr>
+    <button id="Insbtn">Insert</button>
+    <button id="Selbtn">Select</button>
+    <button id="Upbtn">Update</button>
+    <button id="Delbtn">Delete</button>
+   
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyANbgo8c0rbSdjZu8UORbeL06iIIT6rx7w",
+            authDomain: "fir-b86f6.firebaseapp.com",
+            databaseURL: "https://fir-b86f6-default-rtdb.firebaseio.com",
+            projectId: "fir-b86f6",
+            storageBucket: "fir-b86f6.appspot.com",
+            messagingSenderId: "786526910108",
+            appId: "1:786526910108:web:c377e78349b93b7190df59"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        
+        import {getDatabase, ref, set, child, update, remove}
+        from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+
+        const db = getDatabase();
+
+        var namebox = document.getElementById("Namebox");
+        var rollbox = document.getElementById("Rollbox");
+        var secbox = document.getElementById("Secbox");
+        var genbox = document.getElementById("Genbox");
+
+        var insBtn = document.getElementById("Insbtn");
+        var selBtn = document.getElementById("Selbtn");
+        var upBtn = document.getElementById("Upbtn");
+        var delBtn = document.getElementById("Delbtn");
+
+
+        function InsertData(){
+                set(ref(db, "TheStudents/"+ rollbox.value),{
+                    NameOfStd: namebox.value,
+                    RollNo: rollbox.value,
+                    Section: secbox.value,
+                    Gender: genbox.value
+                })
+                .then(()=>{
+                    alert("data stored successfully");
+                })
+                .catch((error)=>{
+                    alert("unsuccessful, error"+error);
+                });
+        }
+        
+
+        insBtn.addEventListener('click', InsertData);
+    </script>
+</body>
+</html>

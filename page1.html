@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Appointment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--<link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<!--top nav-->
+
+<body class="grey lighten-4">
+    <nav class="z- green accent-3 ">
+        <div class="nav-wrapper container">
+            <a href="">PTC Online<span>Register</span></a>
+            <span class="right grey-text text-darken-1">
+                <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+            </span>
+        </div>
+    </nav>
+    <div>
+
+        <ul class="collapsible" data-collapsible="accordion">
+            <li class="active">
+                <div class="collapsible-header">
+                    <i class="material-icons">filter_drama</i>Welcome To PTC Online Appointment
+                </div>
+                <div class="card-image waves-effect waves-block waves-light">
+                    <div class="col s12 row">
+                        <img class="activator col s12"
+                            src="https://scontent.fmnl8-3.fna.fbcdn.net/v/t39.30808-6/278494932_1210111126463088_3717602574642985563_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeHYNYrhZDM2AWV1Pn5b6ymsXjAhuvnnrt9eMCG6-eeu3ylPoj6vtgIkiv_IleJUDrl9JMhE6N3nzDzSaCc2pXQD&_nc_ohc=sGenJk9kGRwAX_adgia&_nc_ht=scontent.fmnl8-3.fna&oh=00_AfBX9Z7NFpIlfkC_aJ6l6ID3Hxfi2aZsWnTFZbu3G5GONg&oe=638FB843">
+                    </div>
+                    <div class="collapsible-body ">
+                    </div>
+                </div>
+            </li>
+            <li class="active">
+                <div class="collapsible-header">
+                    <i class="material-icons">place</i>Guide
+                </div>
+                <div class="collapsible-body">
+                    <ul id="tabs-swipe-demo " class="tabs col s12 center">
+                        <li class="tab col s3"><a href="#test-swipe-1">Steps 1</a></li>
+                        <li class="tab col s3"><a class="active" href="#test-swipe-2">Steps 2</a></li>
+                        <li class="tab col s3"><a href="#test-swipe-3">Steps 3</a></li>
+                    </ul>
+                    <div id="test-swipe-1" class="col s12 blue">
+                        <ul class="collapsible popout container"
+                            style="margin-left: auto; margin-right: auto; width: 90%;">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                                <div class="collapsible-body white"><span>Create your account</span></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                                <div class="collapsible-body white"><span>Enter account details</span></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                                <div class="collapsible-body white"><span>Go back and Log in account that you created</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="test-swipe-2" class="col s12 red">
+                        <ul class="collapsible popout container"
+                            style="margin-left: auto; margin-right: auto; width: 90%;">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                                <div class="collapsible-body white"><span>Find the Guide page</span></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                                <div class="collapsible-body white"><span>And click "Start Creating Appointment" Button</span></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                                <div class="collapsible-body white"><span>Enter details and when done entering details click "Add" button</span></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="test-swipe-3" class="col s12 green">
+                        <ul class="collapsible popout container"
+                            style="margin-left: auto; margin-right: auto; width: 90%;">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                                <div class="collapsible-body white"><span>To search for your Appointment, click "search your appointment here"</span></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                                <div class="collapsible-body white"><span>Enter your full name</span></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                                <div class="collapsible-body white"><span>and you are done!</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="center">
+                        <a class="waves-effect waves-light btn-small add-btn sidenav-trigger" data-target="side-form"><i
+                                class="material-icons left">edit</i>Start Creating Appointment</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">whatshot</i>Search your Appointment here:
+                </div>
+                <div class="collapsible-body center">
+                    <div class="input-field col pull-s10">
+                        <input placeholder="Type your name ex.(-2020)" id="findID" type="text">
+                        <label for="findID">Type your ID</label>
+                        <button id="find">FIND</button>
+                        <h3 class="flow-text" id="findName"></h3>
+                        <h3 class="flow-text" id="findEmail"></h3>
+                        <h3 class="flow-text" id="findDoc"></h3>
+                        <h3 class="flow-text" id="findDate"></h3>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!--side nav (menu)-->
+        <div id="hide" style="visibility: hidden;">
+            <button id="update">UPDATE</button>
+            <button id="remove">REMOVE</button> <br><br>
+        </div>
+
+        <ul id="side-menu" class="sidenav side-menu">
+            <li><a class="subheader">Online Register</a></li>
+            <li><a href="chatroom.html" class="waves-effect">
+                    <i class="material-icons">account_circle</i>Students Chatroom</a>
+            </li>
+            <li><a href="" class="waves-effect">
+                    <i class="material-icons">assignment</i>Courses</a>
+            </li>
+            <li><a href="contact.html" class="waves-effect">
+                    <i class="material-icons">contacts</i>Contacts</a>
+            </li>
+            <li><a href="" class="waves-effect" id="logout">
+                    <i class="material-icons">settings_power</i>Logout</a>
+            </li>
+        </ul>
+
+        <!--add new student form-->
+        <div id="side-form" class="sidenav side-form">
+            <form class="add-student container section">
+                <h5>NEW APPOINTMENT</h5>
+                <div class="divider"></div>
+                <div class="input-field">
+                    <input id="enterID" type="text" class="">
+                    <label for="enterID">Your ID ex.(2314-2020)</label>
+                </div>
+                <div class="input-field">
+                    <input id="enterName" type="text" class="">
+                    <label for="">Full Name ex.(Juan Dela Cruz)</label>
+                </div>
+                <div class="input-field">
+                    <input id="enterEmail" type="email" class="">
+                    <label for="">Institutional Email</label>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="enterDoc" type="text" class="">
+                        <label for="">Document</label>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <input id="enterDate" type="date" class="">
+                    <label for="">Date today</label>
+                </div>
+                <div class="input-field center">
+                    <button id="insert" class="btn-small">Add</button>
+                </div>
+            </form>
+        </div>
+
+
+        <ul class="collapsible popout center" style="margin-left: auto; margin-right: auto; width: 90%;">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">place</i>Location</div>
+                <div class="collapsible-body">
+                    <iframe class="container"
+                        src="https://www.google.com/maps/embed?pb=!4v1669995974914!6m8!1m7!1sGdXMyzeskerPtFPc28aOeA!2m2!1d14.5527583966754!2d121.0689897077588!3f103.91355!4f0!5f0.7820865974627469"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="container"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.812662683663!2d121.06693471347783!3d14.552703089832972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8863fae6025%3A0xe4f1a76191156148!2sPateros%20Technological%20College!5e0!3m2!1sen!2sph!4v1669995918053!5m2!1sen!2sph"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="carousel col s12 m6 l3">
+        <a class="carousel-item" href="#one!"><img src="https://cdn-icons-png.flaticon.com/512/1968/1968750.png"></a>
+        <a class="carousel-item" href="#two!"><img src="https://cdn-icons-png.flaticon.com/512/1968/1968750.png"></a>
+        <a class="carousel-item" href="#three!"><img src="https://cdn-icons-png.flaticon.com/512/1968/1968750.png"></a>
+        <a class="carousel-item" href="#four!"><img src="https://cdn-icons-png.flaticon.com/512/1968/1968750.png"></a>
+        <a class="carousel-item" href="#five!"><img src="https://cdn-icons-png.flaticon.com/512/1968/1968750.png"></a>
+    </div>
+
+
+
+
+
+    <script type="module">
+
+        //THIS IS WHERE YOU PASTE THE CODE TO CONNECT TO YOUR OWN DATABASE
+        //Copy and paste the CDN bit of code from your app that you created on Firebase.
+        //The script tag above is already there, so careful not to have duplicate script tags.
+        //After you've copied and pasted, just delete the unnecessary script tags.
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyANbgo8c0rbSdjZu8UORbeL06iIIT6rx7w",
+            authDomain: "fir-b86f6.firebaseapp.com",
+            databaseURL: "https://fir-b86f6-default-rtdb.firebaseio.com",
+            projectId: "fir-b86f6",
+            storageBucket: "fir-b86f6.appspot.com",
+            messagingSenderId: "786526910108",
+            appId: "1:786526910108:web:c377e78349b93b7190df59"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import { getDatabase, ref, get, set, child, update, remove }
+            from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js" //Copy and Paste the URL from near the top of the CDN you pasted in from firebase
+        // (the one where you imported "initializeApp" from),
+        //but change "firebase-app" to "firebase-database"
+
+
+        const db = getDatabase();
+
+        var enterID = document.querySelector("#enterID");
+        var enterName = document.querySelector("#enterName");
+
+        var enterEmail = document.querySelector("#enterEmail");
+        var enterDoc = document.querySelector("#enterDoc");
+        var enterDate = document.querySelector("#enterDate");
+
+        var findID = document.querySelector("#findID");
+        var findName = document.querySelector("#findName");
+        var findEmail = document.querySelector("#findEmail");
+        var findDoc = document.querySelector("#findDoc");
+        var findDate = document.querySelector("#findDate");
+
+
+
+        var insertBtn = document.querySelector("#insert");
+        var updateBtn = document.querySelector("#update");
+        var removeBtn = document.querySelector("#remove");
+        var findBtn = document.querySelector("#find");
+
+        function InsertData() {
+            set(ref(db, "People/" + enterID.value), {
+                Name: enterName.value,
+                ID: enterID.value,
+                Email: enterEmail.value,
+                Document: enterDoc.value,
+                Date: enterDate.value
+            })
+                .then(() => {
+                    alert("Data added successfully");
+                })
+                .catch((error) => {
+                    alert(error);
+                });
+        }
+
+        function FindData() {
+            const dbref = ref(db);
+
+            get(child(dbref, "People/" + findDate.value))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        findName.innerHTML = "Name: " + snapshot.val().Name;
+                        findEmail.innerHTML = "Email: " + snapshot.val().Email;
+                        findDoc.innerHTML = "Document: " + snapshot.val().Document;
+                        findDate.innerHTML = "Date: " + snapshot.val().Date;
+
+
+                    } else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })
+        }
+
+        function UpdateData() {
+            update(ref(db, "People/" + enterID.value), {
+                Name: enterName.value,
+                Age: enterAge.value
+            })
+                .then(() => {
+                    alert("Data updated successfully");
+                })
+                .catch((error) => {
+                    alert(error);
+                });
+        }
+
+        function RemoveData() {
+            remove(ref(db, "People/" + enterID.value))
+                .then(() => {
+                    alert("Data deleted successfully");
+                })
+                .catch((error) => {
+                    alert(error);
+                });
+        }
+
+        insertBtn.addEventListener('click', InsertData);
+        updateBtn.addEventListener('click', UpdateData);
+        removeBtn.addEventListener('click', RemoveData);
+        findBtn.addEventListener('click', FindData);
+
+
+    </script>
+
+    <script>
+        const students = document.querySelector('.students');
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const menu = document.querySelectorAll('.side-menu');
+            M.Sidenav.init(menu, { edge: 'left' });
+            //access add student form
+            const form = document.querySelectorAll('.side-form');
+            M.Sidenav.init(form, { edge: 'right' });
+        });
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+        });
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
+        $('.pushpin-demo-nav').each(function () {
+            var $this = $(this);
+            var $target = $('#' + $(this).attr('data-target'));
+            $this.pushpin({
+                top: $target.offset().top,
+                bottom: $target.offset().top + $target.outerHeight() - $this.height()
+            });
+        });
+        $(document).ready(function () {
+            $('.tabs').tabs();
+        });
+    </script>
+
+
+
+
+
+</body>
+</html>
